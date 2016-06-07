@@ -83,21 +83,14 @@
         <url>https://junit.ci.cloudbees.com/</url>
     </ciManagement>
     <distributionManagement>
-        <downloadUrl>https://github.com/junit-team/junit4/wiki/Download-and-Install</downloadUrl>
-        <snapshotRepository>
-            <id>junit-snapshot-repo</id>
-            <name>Nexus Snapshot Repository</name>
-            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-        </snapshotRepository>
-        <repository>
-            <id>junit-releases-repo</id>
-            <name>Nexus Release Repository</name>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-        </repository>
-        <site>
-            <id>junit.github.io</id>
-            <url>gitsite:git@github.com/junit-team/junit4.git</url>
-        </site>
+      <snapshotRepository>
+        <id>snapshots</id>
+        <url>http://127.0.0.1:8081/nexus/content/repositories/snapshots</url>
+      </snapshotRepository>
+      <repository>
+        <id>deployment</id>
+        <url>http://127.0.0.1:8081/repository/internal/</url>
+      </repository>
     </distributionManagement>
 
     <properties>
@@ -481,7 +474,7 @@
         <profile>
             <id>generate-docs</id>
             <!--
-            Generate the documentation artifacts. 
+            Generate the documentation artifacts.
             Note: this profile is also required to be active for release
             builds due to the packaging requirements of the Central repo
             -->
