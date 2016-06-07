@@ -4,7 +4,7 @@
 
     <groupId>junit</groupId>
     <artifactId>junit</artifactId>
-    <version>4.13-SNAPSHOT</version>
+    <version>4.13</version>
 
     <name>JUnit</name>
     <description>JUnit is a unit testing framework for Java, created by Erich Gamma and Kent Beck.</description>
@@ -89,7 +89,7 @@
       </snapshotRepository>
       <repository>
         <id>deployment</id>
-        <url>http://127.0.0.1:8081/nexus/content/repository/releases/</url>
+        <url>http://127.0.0.1:8081/nexus/content/repositories/releases/</url>
       </repository>
     </distributionManagement>
 
